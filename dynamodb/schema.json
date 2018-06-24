@@ -1,0 +1,26 @@
+{
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "itemid",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "itemtype",
+      "AttributeType": "S"
+    }
+  ],
+  "KeySchema": [
+    {
+      "AttributeName": "itemtype",
+      "KeyType": "HASH"
+    },
+    {
+      "AttributeName": "itemid",
+      "KeyType": "RANGE"
+    }
+  ],
+  "ProvisionedThroughput": {
+          "WriteCapacityUnits": 2, 
+          "ReadCapacityUnits": 2
+      }
+}
