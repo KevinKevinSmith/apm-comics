@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>APM Item</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-item.css" rel="stylesheet">
+
+    <script src="js/js.cookie.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">APM Comics</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">My Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <br>
+            <div id="alertBannerDiv" style="display: none">
+
+            </div>
+            <div class="card mt-4">
+                <img id="item-image" class="card-img-top img-fluid" src="http://placehold.it/900x400" alt=""
+                     style="height:100%">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="item-title" id="item-title">Product Name</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <h5 id="item-author">Author Name</h5>
+                            <h5 id="item-price">$24.99</h5>
+                        </div>
+                        <div class="col-6 text-center" id="addToCartDiv">
+                                <div class="form-group">
+                                    <label for="itmQty">Qty: </label>
+                                    <input type="number" id="itmQty" style="size:30em" min="1" max="99" value="1">
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick=
+                                        setItemCart(isbn,document.getElementById("itmQty").value);loadCartButtons(isbn);>Add to Cart</button>
+                                <button type="button" class="btn btn-secondary" onclick=setItemCart(isbn,0);loadCartButtons(isbn); id="removeCartButton">Remove from Cart</button>
+                        </div>
+                    </div>
+                    <br>
+                    <p class="card-text" id="item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam
+                        sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                </div>
+            </div>
+            <br>
+        </div>
+        <!-- /.col-lg-9 -->
+    </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    var isbn = getParameterByName('isbn', window.location.href)
+    window.onload = loadItemDetails(isbn);
+</script>
+
+</body>
+
+</html>
