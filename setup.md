@@ -36,13 +36,13 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 14. In the "Index document" textbox, enter `index.html`
 15. Click Save
 16. Launch a terminal window
-17. Run the following command to copy the contents of the APM Comics Website to your S3 Bucket:<br/>`aws s3 sync s3://apm-comics-web s3://YOUR_BUCKET_HERE --region US-EAST-1 --acl bucket-owner-full-control --acl public-read`<br/>replacing `YOUR_BUCKET_HERE` with the name of the bucket you created in Step 3
+17. Run the following command to copy the contents of the APM Comics Website to your S3 Bucket:<br/>`aws s3 sync s3://apm-comics-web/web s3://YOUR_BUCKET_HERE --region US-EAST-1 --acl bucket-owner-full-control --acl public-read`<br/>replacing `YOUR_BUCKET_HERE` with the name of the bucket you created in Step 3
 18. Attempt to visit `http://YOUR_BUCKET_HERE.s3-website-us-east-1.amazonaws.com` replacing `YOUR_BUCKET_HERE` with the name of the bucket you created in Step 3 and ensure that the page loads. There might not be much there, as the DynamoDB page is not properly set up (yet)
 
 ### Programatic Steps
 1. Launch terminal window
 2. `aws s3api create-bucket --bucket YOUR_BUCKET_HERE --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1`<br/> replacing `YOUR_BUCKET_HERE` with a unique bucket name (e.g. `apm-comics-web-flast` where you replace `flast` with the first letter of your first name and your last name)
-3. `aws s3 sync s3://apm-comics-web s3://YOUR_BUCKET_HERE --region US-EAST-1 --acl bucket-owner-full-control --acl public-read`<br/>replacing `YOUR_BUCKET_HERE` with the name of the bucket you created in Step 2
+3. `aws s3 sync s3://apm-comics-web/web s3://YOUR_BUCKET_HERE --region US-EAST-1 --acl bucket-owner-full-control --acl public-read`<br/>replacing `YOUR_BUCKET_HERE` with the name of the bucket you created in Step 2
 4. `aws s3 website s3://YOUR_BUCKET_HERE/ --index-document index.html --error-document error.html`<br/>replacing `YOUR_BUCKET_HERE` with the name of the bucket you created in Step 2
     
 ## Setup IAM Roles
