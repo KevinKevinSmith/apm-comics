@@ -49,7 +49,7 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 ### Interactive Steps
 1. Navigate to [IAM](https://console.aws.amazon.com/iam/home?region=us-east-1#/home)
 2. Select "Policies" from the left sidebar
-3. Click "Create Policy" under "Attach permissions policies"
+3. Click "Create Policy"
 4. In the new window, select the "JSON" tab and copy directly from the `apm_dynamo.json` file under the `iam` folder of the root directory of the repo
 5. Click "Review Policy"
 6. Name the policy `apm-comics-dynamo` and in the description, you can mention that `This policy will be used to control the access to the DynamoDB table for the apm-comics project`, or something of the like.
@@ -81,7 +81,7 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 ## Interactive Steps
 1. Navigate to [Lambda](https://console.aws.amazon.com/lambda/home?region=us-east-1#)
 2. Select "Create Function"
-3. Enter `apm-comics-getAllItems` in the "Name" textbox
+3. Click on the "Author from Scrach" box, and enter `apm-comics-getAllItems` in the "Name" textbox
 4. Select `Python 3.6` in the "Runtime" textbox
 5. Select `apm-comics-role` from the dropdown under "Existing Role"
 6. Click "Create function"
