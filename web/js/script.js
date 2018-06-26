@@ -20,7 +20,7 @@ function loadBooks() {
                         var shortText = "";
                     }
 
-                    var bookThumbnail = "https://s3.amazonaws.com/malones-comics-dev/covers/" + isbn + "-L.jpg";
+                    var bookThumbnail = bookURL + isbn + "-L.jpg";
                     var book = "<div class=\"col-lg-3 col-md-6 mb-4\"> <div class=\"card\"> <img class=\"card-img-top\" src=\"{2}\" alt=\"\"> <div class=\"card-body\"> <h4 class=\"card-title\">{0}</h4> <p class=\"card-text\">{1}</p> </div> <div class=\"card-footer\"> <a href=\"item.html?isbn={3}\" class=\"btn btn-primary\">Buy Me!</a> </div> </div> </div>".format(title, shortText, bookThumbnail, isbn);
                     innerBooks = innerBooks + book + "\n\n";
                 }
