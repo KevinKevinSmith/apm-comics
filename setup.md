@@ -95,7 +95,7 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 1. Navigate to [API Gateway](https://console.aws.amazon.com/apigateway/home?region=us-east-1)
 2. Click "Create API"
 3. Select "New API"
-4. Enter `api-comics-api` into the "API name" textbox
+4. Enter `apm-comics-api` into the "API name" textbox
 5. Click "Create API"
 6. Click on the root `/` resource, and select "Actions" -> "Create Resource"
 7. In "Resource Name" and "Resource Path" enter `getCart` (Case Sensitive)
@@ -149,14 +149,15 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 5. Select `apm-comics-role` from the dropdown under "Existing Role"
 6. Click "Create function"
 7. Scroll down to "Function code" and paste the contents of the `lambda\importData.py` file into the program editor window
-8. Select "Save" and check that the save completes successfully
-9. In the dropdown next to the test button, select "Configure Test Events"
-10. In the "Event name" textbox, enter `run`
-11. In the code box below, clear it all out, and enter an empty JSON `{ }`
-12. Click "Create"
-13. Scroll down to "Basic Settings" and set the timeout to `15 sec` 
-14. Click "Test"
-15. Wait for a `null` return value from the function. A null return indicates that all of your data has been imported!
+8. Edit line 26 and change the bucket name to the one created earlier in the S3 section
+9. Select "Save" and check that the save completes successfully
+10. In the dropdown next to the test button, select "Configure Test Events"
+11. In the "Event name" textbox, enter `run`
+12. In the code box below, clear it all out, and enter an empty JSON `{ }`
+13. Click "Create"
+14. Scroll down to "Basic Settings" and set the timeout to `15 sec` 
+15. Click "Test"
+16. Wait for a `null` return value from the function. A null return indicates that all of your data has been imported!
 
 ## Complete
 Congratulations! If you now visit `http://YOUR_BUCKET_NAME.s3-website-us-east-1.amazonaws.com`, you should see a functioning Serverless AWS Application!
