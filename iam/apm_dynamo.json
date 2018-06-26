@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:PutItem",
+                "dynamodb:GetShardIterator",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem",
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords"
+            ],
+            "Resource": [
+                "arn:aws:dynamodb:us-east-1:*:table/apm-comics-prod/stream/*",
+                "arn:aws:dynamodb:us-east-1:*:table/apm-comics-prod",
+                "arn:aws:dynamodb:*:*:table/*/index/*",
+                "arn:aws:dynamodb:us-east-1:*:table/apm-comics-prod"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "dynamodb:ListStreams",
+            "Resource": "*"
+        }
+    ]
+}
