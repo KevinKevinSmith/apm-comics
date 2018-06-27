@@ -1,3 +1,12 @@
 # APM Comics: A Serverless AWS Demo
 
-Unfortunately, there is not much here right now. In the meanwhile, if you need assitance with setting up your AWS account and CLI, please visit [the AWS Setup Page](awssetup.md)
+Welcome to a APM Comics, a AWS Serverless Website demo. You can see the final product at [http://apmcomics.aws.krauza.cloud](http://apmcomics.aws.krauza.cloud)
+
+Please follow one of the files below to get started:
+* [Getting your AWS Account Setup](awssetup.md)
+* [Build your Web App!](setup.md)
+
+This application will leverage the following AWS Services:
+* AWS Lambda
+* Amazon DynamoDB
+* Amazon S3
