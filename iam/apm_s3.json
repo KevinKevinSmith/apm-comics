@@ -38,8 +38,7 @@
                 "s3:GetObjectVersion"
             ],
             "Resource": [
-                "arn:aws:s3:::YOUR_BUCKET_NAME_HERE",
-                "arn:aws:s3:::*/*"
+                "arn:aws:s3:::YOUR_BUCKET_NAME_HERE"
             ]
         }
     ]
