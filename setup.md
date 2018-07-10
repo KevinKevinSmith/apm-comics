@@ -72,8 +72,8 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 
 ### Programatic Steps
 1. Launch terminal window in the `/iam` folder
-2. `aws iam create-policy --policy-name apm-comics-dynamo --policy-document file://apm_dynamo.json`
-3. `aws iam create-policy --policy-name apm-comics-s3 --policy-document file://apm_s3.json`
+2. `aws iam create-policy --policy-name apm-comics-dynamo --policy-document https://s3.amazonaws.com/apm-comics-web/iam/apm_dynamo.json`
+3. `aws iam create-policy --policy-name apm-comics-s3 --policy-document https://s3.amazonaws.com/apm-comics-web/iam/apm_s3.json`
 4. Navigate to [IAM Roles](https://console.aws.amazon.com/iam/home?region=us-east-1#/roles)
 5. Start following the Interactive Steps at Step 13
 
