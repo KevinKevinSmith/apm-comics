@@ -98,17 +98,17 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 4. Enter `apm-comics-api` into the "API name" textbox
 5. Click "Create API"
 6. Click on the root `/` resource, and select "Actions" -> "Create Resource"
-7. In "Resource Name" and "Resource Path" enter `getCart` (Case Sensitive)
+7. In "Resource Name" and "Resource Path" enter `getItems` (Case Sensitive)
 8. Check "Enable API Gateway CORS"
 9. Click "Create Resource"
-10. Click on `/getCart`
+10. Click on `/getItems`
 11. Select "Actions" -> "Create Method"
-12. In the new drop down that appears, select `POST` and click the check mark
-13. Click on `POST` under `/getCart`
+12. In the new drop down that appears, select `Get` and click the check mark
+13. Click on `GET` under `/getItems`
 14. Select `Lambda Function` under "Integration Type" and in the "Lambda Function" textbox, enter "apm-comics-getAllItems", which should be auto predicted
 15. Click "Save"
 16. You will be promoted with a box to "Add Permission to Lambda Function". Click "OK"
-17. Click on `/getCart`
+17. Click on `/getItems`
 18. Select "Actions" -> "Enable COORS"
 19. Click "Enable CORS and replace existing CORS headers"
 20. Click "Yes, replace existing values" when prompted to Confirm method changes
@@ -118,7 +118,7 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 |-------|-------|-------|  
 |getCustomer|POST|apm-comics-getCustomer|
 |getItem|POST|apm-comics-getItem| 
-|getItems|GET|apm-comics-getAllItems| 
+|getCart|POST|apm-comics-getCart|
 |getSession|POST|apm-comics-getSession|  
 
 22. Click on the root `/` resource, and select "Actions" -> "Deploy API"
