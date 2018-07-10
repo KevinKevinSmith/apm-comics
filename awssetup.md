@@ -56,7 +56,7 @@ Post install, run the following command and verify that the software is properly
 	```
 2. Unzip the package
 	```bash
-	unzip awscli-bunzle.zip
+	unzip awscli-bundle.zip
 	```
 3. Run the install executable
 	```bash
