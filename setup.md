@@ -131,7 +131,7 @@ Welcome to the APM Comics install guide. Follow these directions to build your o
 29. Navigate to the "js" folder and click on the "script.js" file
 30. Click the "download" button
 31. Open the downloaded `script.js` file in your favorite text editor
-32. Edit the first line to change `apm-comics-web` to the bucket name you created earlier
+32. Edit the first line to change `YOUR_BUCKET_HERE` to the bucket name you created earlier
 33. Edit the second line to change the apiURL to the URL created in step 26
 34. Save the file
 35. Click your browser's back button
